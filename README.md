@@ -1,6 +1,89 @@
-# VoiceForPeace - Ultra-Fast Global Humanitarian Aid Platform
+# EchoAid - Ultra-Fast Global Humanitarian Aid Platform
 
 A modern web application that connects global communities through voice-based storytelling and ultra-fast transparent humanitarian aid distribution, powered by BlockDAG network, ElevenLabs AI, and Supabase database.
+
+# Project Overview
+EchoAid is a revolutionary humanitarian aid platform that combines cutting-edge AI technology with BlockDAG blockchain to create the world's fastest and most transparent donation system. Our platform connects global communities through AI-powered voice storytelling while enabling ultra-fast, verifiable humanitarian aid distribution.
+
+# Key Innovation
+Ultra-Fast Blockchain Donations: Powered by BlockDAG network, our platform processes donations in ~1.2 seconds with 15,000+ TPS, making it the fastest humanitarian aid platform in the world.
+
+# Core Features
+AI-Powered Storytelling
+. ElevenLabs Voice AI: Real-time voice generation for humanitarian stories in multiple languages
+. Tavus Video AI: Personalized video messages from aid workers and beneficiaries
+. Multi-language Support: Stories available in 10+ languages including Arabic, Ukrainian, and English
+
+# ✨ BlockDAG Blockchain Integration
+. Ultra-Fast Donations: 1.2-second confirmation times vs traditional 4+ seconds
+. Complete Transparency: Every donation tracked on BlockDAG with real-time verification
+. Multiple Wallets: Support for BlockDAG Wallet, MetaMask, and WalletConnect
+. Low Fees: Minimal transaction costs for maximum impact
+
+# Gamified Community Engagement
+. Daily Quests: Earn tokens by sharing stories, making donations, and engaging with content
+. Reddit Integration: Automated quest completion through social media engagement
+. Global Leaderboards: Community-driven impact tracking and recognition
+. Token Rewards: Incentivized participation in humanitarian causes
+
+# Premium Features (RevenueCat)
+. Subscription Management: Tiered access to exclusive content and features
+. Direct Sponsor Connections: Premium users can connect directly with humanitarian sponsors
+. Advanced Analytics: Detailed impact tracking and donation history
+. Ad-free Experience: Clean, distraction-free interface for supporters
+. Real-time Data & Transparency
+
+# Supabase Backend: Real-time user profiles, story management, and community features
+- Live Donation Tracking: Watch donations flow to projects in real-time
+- Impact Visualization: Interactive global map showing project locations and progress
+- Blockchain Explorer Integration: Direct links to verify all transactions
+
+
+# Technology Stack
+Frontend: React 18 + TypeScript + Vite + Tailwind CSS
+Blockchain: BlockDAG Network (15,000+ TPS, 1.2s confirmations)
+AI Voice: ElevenLabs API for multi-language voice generation
+AI Video: Tavus API for personalized video messages
+Database: Supabase (PostgreSQL with real-time features)
+Payments: RevenueCat for subscription management
+Social: Reddit API for community quest integration
+Maps: Google Maps for global impact visualization
+
+
+# Unique Value Proposition
+Speed: Fastest humanitarian donation platform (1.2s vs industry 4+ seconds)
+Transparency: 100% blockchain-verified donations with real-time tracking
+Engagement: AI-powered storytelling creates emotional connection with causes
+Gamification: Quest system incentivizes community participation and sharing
+Global Reach: Multi-language support and worldwide project coverage
+Scalability: BlockDAG technology handles massive transaction volumes
+
+
+# Impact Metrics
+Transaction Speed: 15,000+ TPS capability
+Confirmation Time: ~1.2 seconds average
+Language Support: 10+ languages for global accessibility
+Real-time Features: Live donation tracking and community updates
+Transparency: 100% blockchain-verified fund distribution
+
+
+# Gamification & Community
+Quest System: Daily challenges for community engagement
+Token Economy: Reward system for platform participation
+Social Integration: Reddit API for automated quest completion
+Leaderboards: Global and regional impact rankings
+Premium Tiers: Subscription-based enhanced features
+
+
+# Security & Trust
+Blockchain Verification: All donations recorded on BlockDAG
+Row-Level Security: Supabase RLS for data protection
+Multi-Wallet Support: Secure wallet integrations
+Real-time Monitoring: Live transaction and impact tracking
+
+
+# Global Impact
+EchoAid addresses critical humanitarian challenges by combining the emotional power of AI-generated storytelling with the speed and transparency of BlockDAG blockchain technology. Our platform makes humanitarian aid more accessible, transparent, and engaging than ever before.
 
 ## Features
 

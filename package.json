@@ -10,12 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@algorandfoundation/algokit-utils": "^6.0.0",
     "@googlemaps/react-wrapper": "^1.1.35",
     "@revenuecat/purchases-js": "^1.6.0",
     "@supabase/supabase-js": "^2.39.0",
     "algosdk": "^2.7.0",
-    "@algorandfoundation/algokit-utils": "^6.0.0",
     "elevenlabs": "^0.8.2",
+    "hardhat": "^3.0.6",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

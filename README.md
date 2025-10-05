@@ -1,3 +1,9 @@
+<video width="320" height="240" controls>
+  <source src="/recording.mov" type="video/mov">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
 # EchoAid - Ultra-Fast Global Humanitarian Aid Platform
 
 A modern web application that connects global communities through voice-based storytelling and ultra-fast transparent humanitarian aid distribution, powered by BlockDAG network, ElevenLabs AI, and Supabase database.

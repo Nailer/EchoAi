@@ -1,8 +1,7 @@
-<video width="320" height="240" controls>
-  <source src="/recording.mov" type="video/mov">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
+[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/DpzWR01nfYc)
+
+[![Watch the video](https://youtu.be/Kq4UQByS1tw)](https://youtu.be/DpzWR01nfYc)
+
 
 # EchoAid - Ultra-Fast Global Humanitarian Aid Platform
 

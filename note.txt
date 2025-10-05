@@ -1,1 +1,2 @@
 be aware that a possible cause of error could arise from the `hardhat` version incompactibility.
+also, the possible cause of another error could be that the hardhat initialisation was Javascript while the project has typescript

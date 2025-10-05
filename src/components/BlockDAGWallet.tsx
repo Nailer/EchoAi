@@ -26,6 +26,38 @@ export default function BlockDAGWallet() {
     createCampaign: any;
   };
 
+  const [form, setForm] = useState({
+    title: "",
+    description: "",
+    amount: "",
+    deadline: "",
+  });
+
+  // const handleChange = (e) => {
+  //   setForm({ ...form, [e.target.name]: e.target.value });
+  // };
+
+  const createNewCampaign = async ({e}:any) => {
+    e?.preventDefault();
+    try {
+      const data = await createCampaign(form);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleSubmit = async ({e}: any) => {
+    e?.preventDefault();
+    try {
+      await createCampaign(form); // ✅ Call function directly
+      alert("Campaign created successfully!");
+    } catch (err) {
+      console.error("Failed to create campaign:", err);
+      alert("Error creating campaign.");
+    }
+  };
+
+
   // const {
   //   wallet,
   //   balance,
@@ -108,6 +140,80 @@ export default function BlockDAGWallet() {
 
         <div className="flex space-x-3">
           <button
+            className="flex-1 bg-white bg-opacity-20 hover:bg-opacity-30 py-2 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center space-x-2 text-sm"
+          >
+            <label htmlFor="">Title</label>
+            <input 
+              type="text"
+              onChange={(e) =>
+                        setForm({
+                          ...form,
+                          title: e.target.value,
+                        })
+                      }
+              placeholder='Enter the title'
+              className="bg-pink-500 text-white placeholder-white text-sm px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-300 "
+            />
+          </button>
+          
+        </div>
+        <div className="flex space-x-3">
+          <button
+            className="flex-1 bg-white bg-opacity-20 hover:bg-opacity-30 py-2 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center space-x-2 text-sm"
+          >
+            <label htmlFor="">Description</label>
+            <input 
+              type="text"
+              onChange={(e) =>
+                        setForm({
+                          ...form,
+                          description: e.target.value,
+                        })
+                      }
+              className="bg-pink-500 text-white placeholder-white text-sm px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-300 "
+            />
+          </button>
+          
+        </div>
+        <div className="flex space-x-3">
+          <button
+            className="flex-1 bg-white bg-opacity-20 hover:bg-opacity-30 py-2 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center space-x-2 text-sm"
+          >
+            <label htmlFor="">Amount</label>
+            <input 
+              type="number"
+              onChange={(e) =>
+                setForm({
+                  ...form,
+                  amount: e.target.value,
+                })
+              }
+              className="bg-pink-500 text-white placeholder-white text-sm px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-300 "
+            />
+          </button>
+          
+        </div>
+        <div className="flex space-x-3">
+          <button
+            className="flex-1 bg-white bg-opacity-20 hover:bg-opacity-30 py-2 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center space-x-2 text-sm"
+          >
+            <label htmlFor="">Deadline</label>
+            <input 
+              type="date"
+              onChange={(e) =>
+                        setForm({
+                          ...form,
+                          deadline: e.target.value,
+                        })
+                      }
+              className="bg-pink-500 text-white placeholder-white text-sm px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-300 "
+            />
+          </button>
+          
+        </div>
+        <div className="flex space-x-3">
+          <button
+            onClick={(e) => createNewCampaign(e)}
             className="flex-1 bg-white bg-opacity-20 hover:bg-opacity-30 py-2 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center space-x-2 text-sm"
           >
             <ExternalLink className="w-4 h-4" />

@@ -29,7 +29,7 @@ const config: HardhatUserConfig = {
       accounts: [process.env.DEPLOYER_PRIVATE_KEY || ""],
       chainId: 1043,
       gasPrice: 50000000000, // 50 gwei
-      timeout: 200000
+      timeout: 200000,
     },
     hardhat: {
       chainId: 31337,

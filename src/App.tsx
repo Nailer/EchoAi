@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { 
   Play, 
   Heart, 
@@ -34,7 +34,8 @@ import SupabaseAuth from './components/SupabaseAuth';
 import SupabaseSetup from './components/SupabaseSetup';
 import SubscriptionPaywall from './components/SubscriptionPaywall';
 import SubscriptionStatus from './components/SubscriptionStatus';
-import BlockDAGWallet from './components/BlockDAGWallet';
+// @ts-ignore: No declaration file for BlockDAGWallet (JSX module)
+import BlockDAGWallet from './components/BlockDAGWallet.jsx';
 import DonationModal from './components/DonationModal';
 import BlockchainTransparency from './components/BlockchainTransparency';
 import VoicePlayer from './components/VoicePlayer';
@@ -44,6 +45,9 @@ import { useRevenueCat } from './hooks/useRevenueCat';
 import { useElevenLabs } from './hooks/useElevenLabs';
 import { useSupabase } from './hooks/useSupabase';
 import { VoiceSettings as IVoiceSettings } from './services/ElevenLabsService';
+// @ts-ignore: No declaration file for BlockDAGWallet (JSX module)
+import {CrowdFundingContext} from "../Context/EchoAid"
+
 
 // Read API keys from environment variables
 const REVENUECAT_API_KEY = import.meta.env.VITE_REVENUECAT_API_KEY;
@@ -51,7 +55,25 @@ const ELEVENLABS_API_KEY = import.meta.env.VITE_ELEVENLABS_API_KEY;
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-function App() {
+function App({campaignId}: any) {
+
+  const [amount, setAmount] = useState("");
+  const { donate } = useContext(CrowdFundingContext) as {
+    donate: any;
+  }
+
+  const handleDonate = async () => {
+    try {
+      // ✅ Call it like any normal async function
+      const tx = await donate(campaignId, amount);
+      console.log("Transaction successful:", tx);
+      alert("Donation successful!");
+    } catch (err) {
+      console.error("Donation failed:", err);
+      alert("Donation failed. See console for details.");
+    }
+  };
+
   const [activeStory, setActiveStory] = useState(0);
   const [donationModalOpen, setDonationModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<{
@@ -474,8 +496,14 @@ function App() {
                 </div>
 
                 <div className="flex space-x-3">
+                  <input
+                    type="number"
+                    placeholder="Enter amount in ETH"
+                    value={amount}
+                    onChange={(e) => setAmount(e.target.value)}
+                  />
                   <button 
-                    onClick={() => handleDonateClick(stories[activeStory].project_id)}
+                    onClick={handleDonate}
                     className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2"
                   >
                     <DollarSign className="w-4 h-4" />

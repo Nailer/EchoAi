@@ -16,10 +16,12 @@
     "@supabase/supabase-js": "^2.39.0",
     "algosdk": "^2.7.0",
     "elevenlabs": "^0.8.2",
+    "ethers": "^6.15.0",
     "hardhat": "^3.0.6",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "web3modal": "^1.9.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",

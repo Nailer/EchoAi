@@ -3,7 +3,7 @@
 <!-- [![Watch the video](https://youtu.be/Kq4UQByS1tw)](https://youtu.be/DpzWR01nfYc) -->
 
 
-# EchoAid - Ultra-Fast Global Humanitarian Aid Platform
+# EchoAid 
 
 A modern web application that connects global communities through voice-based storytelling and ultra-fast transparent humanitarian aid distribution, powered by BlockDAG network, ElevenLabs AI, and Supabase database.
 
